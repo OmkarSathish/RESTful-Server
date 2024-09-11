@@ -4,9 +4,9 @@
      "description": "",
      "main": "dist/app.js",
      "scripts": {
-          "start": "set NODE_ENV=PRODUCTION & node dist/app.js",
+          "start": "npx tsc -p . && set NODE_ENV=PRODUCTION & node dist/app.js",
           "build": "npx tsc -p .",
-          "dev": "npx nodemon dist/app.js",
+          "dev": "npx tsc -p . && npx nodemon dist/app.js",
           "watch": "npx tsc -w"
      },
      "keywords": [],
