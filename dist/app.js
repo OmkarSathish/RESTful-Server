@@ -34,7 +34,10 @@ app
             clickCount: 0,
         });
         await ans.save();
-        res.send(ans.shortUrl);
+        const _html = `
+      <h1 style="font-family: Sans-Serif; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">Your short URL is: ${ans.shortUrl}</h1>
+    `;
+        res.send(_html);
     }
     catch (error) {
         throw new ErrorHandler(500, "Internal Server Error");
@@ -51,7 +54,10 @@ app
         }
         ans.clickCount++;
         await ans.save();
-        res.status(200).send(`${ans.url}`);
+        const _html = `
+      <h1 style="font-family: Sans-Serif; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">${ans.url}</h1>
+    `;
+        res.status(200).send(_html);
     }
     catch (error) {
         throw new ErrorHandler(500, "Internal Server Error");
