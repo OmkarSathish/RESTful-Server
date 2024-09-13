@@ -24,7 +24,7 @@ app.use(morgan("dev"));
 
 app.get("/api", (req, res) => {
   const _html = `
-    <h1 style="font-family: Sans-Serif; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">CI/CD Pipeline Project for NodeJS Apps</h1>
+    <h1 style="font-family: Sans-Serif; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">CI/CD Pipeline Project for NodeJS Apps using NGINX, GitHub Actions and AWS</h1>
   `;
   res.send(_html);
 });
